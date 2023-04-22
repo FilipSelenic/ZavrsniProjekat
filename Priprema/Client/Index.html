@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js"></script>
+    
+    <title>Test</title>
+</head>
+<body onload="loadData()">
+    <div class="container">
+		<div id="logout" style="display:none" class="mb-3 row text-center">
+			<br /><br />
+			<div>
+				<p id="info"></p>
+				<div>
+					<button class="btn btn-danger" onclick="logout()">Odjava</button>
+				</div>
+			</div>
+		</div>
+		<br /><br />
+		<div class="container text-center" id="logRegBtns" style="display: block;">
+				<h3>Korisnik nije prijavljen na sistem</h3>
+				<div class="mb-3  text-center">	
+					<button class="btn btn-primary col-sm-2" onclick="showLogin()">Prijava</button>
+				</div>
+				<div class="mb-3  text-center">	
+					<button class="btn btn-success col-sm-2 " onclick="showRegistration()">Registracija</button>
+				</div>
+		</div>
+		<div id="loginForm" style="display:none" class="container text-center" >
+			<h3>Prijava korisnika</h3>
+			<form method="post" action="post/" id="loginFormForm" onsubmit="return loginUser()">
+				<div class="mb-3 row">
+					<label for="usernameLogin" class="col-sm-2 col-form-label">Korisnicko ime:</label>
+					<div class="col-sm-10">
+					  <input type="text"  class="form-control" id="usernameLogin">
+					</div>
+				  </div>
+				  <div class="mb-3 row">
+					<label for="passwordLogin" class="col-sm-2 col-form-label">Lozinka:</label>
+					<div class="col-sm-10">
+					  <input type="password" class="form-control" id="passwordLogin">
+					</div>
+				  </div>
+				  <div class="mb-3  text-center">	
+					<button type="submit" class="btn btn-primary col-sm-2">Prijavi se</button>
+				</div>
+				<div class="mb-3  text-center">	
+					<button class="btn btn-danger col-sm-2" type="button" id="btnRegister" onclick="odustanak()">Odustajanje</button>
+				</div>
+			</form>
+			
+		</div>
+
+		<div id="registerForm" style="display:none" class="container text-center">
+			<h3>Registracija korinika</h3>
+			<form method="post" action="post/" id="registerFormForm" onsubmit="return registerUser()">
+				<div class="mb-3 row">
+					<label for="usernameRegister" class="col-sm-2 col-form-label">Korisnicko ime:</label>
+					<div class="col-sm-10">
+					  <input type="text"  class="form-control" id="usernameRegister">
+					</div>
+				  </div>
+				  <div class="mb-3 row">
+					<label for="emailRegister" class="col-sm-2 col-form-label">Email:</label>
+					<div class="col-sm-10">
+					  <input type="email" class="form-control" id="emailRegister">
+					</div>
+				  </div>
+				  <div class="mb-3 row">
+					<label for="passwordRegister" class="col-sm-2 col-form-label">Lozinka:</label>
+					<div class="col-sm-10">
+					  <input type="password"  class="form-control" id="passwordRegister">
+					</div>
+				  </div>
+				  <div class="mb-3 row">
+					<label for="confirmPasswordRegister" class="col-sm-2 col-form-label">Ponovi lozinku:</label>
+					<div class="col-sm-10">
+					  <input type="password" class="form-control" id="confirmPasswordRegister">
+					</div>
+				  </div>
+				  <div class="mb-3  text-center">	
+					<button type="submit" class="btn btn-primary col-sm-2">Registruj se</button>
+				</div>
+				<div class="mb-3  text-center">	
+					<button class="btn btn-danger col-sm-2" type="button" onclick="odustanak()">Odustajanje</button>
+				</div>
+				</form>
+			
+		</div>
+		<br />
+		<br />
+		<div id="pretragaDiv" style="display:none" class="container text-center">
+			<h3>Pretraga paketa po tezini</h3>
+                <br>
+                <form method="post" id="pretragaForm" action="post/" onsubmit="return submitPretragaForm()" >
+					<div class="mb-3 row">
+						<label for="NajmanjeInput" class="col-sm-2 col-form-label">Najmanje(Kg):</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="NajmanjeInput" >
+						</div>
+					  </div>
+					  <div class="mb-3 row">
+						<label for="NajviseInput" class="col-sm-2 col-form-label">Najvise(Kg):</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="NajviseInput" >
+						</div>
+					  </div>
+					  <div class="mb-3  text-center">	
+						<button class="btn btn-primary col-sm-3">Trazi</button>
+					</div>
+            </form>
+			
+		</div>
+		<div id="data" style="display:none" class="container text-center">
+		</div>
+
+		<div id="formDiv" style="display:none" class="container text-center">
+			
+			<h3>Dodavanje novog paketa</h3>
+			<form method="post" action="post/" id="paketiForm" onsubmit="return submitForm()">
+				
+				<div class="mb-3 row">
+					<label for="posiljalacInput" class="col-sm-2 col-form-label">Posiljalac:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="posiljalacInput" >
+					</div>
+				  </div>
+				  <div class="mb-3 row">
+					<label for="primalacInput" class="col-sm-2 col-form-label">Primalac</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="primalacInput" >
+					</div>
+				  </div>
+				  <div class="mb-3 row">
+					<label for="tezinaInput" class="col-sm-2 col-form-label">Tezina(kg):</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="tezinaInput" >
+					</div>
+				  </div>
+				  <div class="mb-3 row">
+					<label for="postarinaInput" class="col-sm-2 col-form-label">Cena postarine:</label>
+					<div class="col-sm-10">
+						<input type="number" class="form-control" id="postarinaInput" >
+					</div>
+				  </div>
+				  <div class="mb-3 row">
+					<label for="kurirInput" class="col-sm-2 col-form-label">Kurir:</label>
+					<div class="col-sm-10">
+						<select class="form-select" id="kurirInput">
+						</select>
+					</div>
+				  </div>
+				  <div class="mb-6 text-center" >
+					<div class="mb-3  text-center">	
+						<button class="btn btn-success col-sm-2">Dodavanje</button>
+					</div>
+					<div class="mb-3  text-center">	
+						<button class="btn btn-warning col-sm-2 "  type="button" onclick="cleanSubmitForm()">Odustajanje</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
