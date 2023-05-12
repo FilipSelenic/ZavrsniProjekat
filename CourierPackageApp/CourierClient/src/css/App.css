@@ -1,0 +1,131 @@
+* {
+  text-align: center;
+  margin: auto;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+label {
+  padding: 5px;
+}
+@media (max-width: 768px) {
+  body {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+      ),
+      url("../photos/pexels-photo-114979.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+}
+body {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("../photos/pexels-photo-114979.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-size: cover;
+}
+
+table {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-right: 10px !important;
+  margin-left: 10px !important;
+  width: 100px;
+}
+
+.signForm {
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #7a7d80;
+  border-radius: 10px;
+  color: white;
+}
+
+form input {
+  margin: auto;
+}
+
+.signedUser {
+  color: white;
+}
+
+.filterBtn {
+  padding: 20px;
+  padding-top: 30px;
+  color: white;
+}
+
+.searchForm {
+  padding: 20px;
+  margin-top: 80px;
+  background-color: #7a7d80;
+  border-radius: 20px;
+  width: 80%;
+  color: white;
+}
+.addForm {
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  background-color: #7a7d80;
+  border-radius: 20px;
+  width: 80%;
+  color: white;
+}
+thead {
+  background-color: grey;
+  color: white;
+}
+tbody {
+  background: rgb(218, 215, 215);
+  color: white;
+}
+
+.signingBtns,
+.regBtns {
+  padding: 20px;
+  padding-top: 30px;
+  color: white;
+}
+#cancelLogin,
+#cancelReg {
+  color: white;
+}
+#logout {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+}
+
+.link-button {
+  color: inherit;
+  text-decoration: none;
+}
+.link-button:hover {
+  color: inherit;
+  text-decoration: none;
+}
+h2 {
+  padding-bottom: 20px;
+  font-weight: bold;
+}
