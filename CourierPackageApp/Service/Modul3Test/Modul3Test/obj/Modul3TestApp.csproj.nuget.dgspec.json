@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Filip\\Desktop\\Projekat1\\Priprema\\Service\\Modul3Test\\Modul3Test\\Modul3TestApp.csproj": {}
+    "C:\\Users\\Filip\\Desktop\\Projekat1\\CourierPackageApp\\Service\\Modul3Test\\Modul3Test\\Modul3TestApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Filip\\Desktop\\Projekat1\\Priprema\\Service\\Modul3Test\\Modul3Test\\Modul3TestApp.csproj": {
+    "C:\\Users\\Filip\\Desktop\\Projekat1\\CourierPackageApp\\Service\\Modul3Test\\Modul3Test\\Modul3TestApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Filip\\Desktop\\Projekat1\\Priprema\\Service\\Modul3Test\\Modul3Test\\Modul3TestApp.csproj",
+        "projectUniqueName": "C:\\Users\\Filip\\Desktop\\Projekat1\\CourierPackageApp\\Service\\Modul3Test\\Modul3Test\\Modul3TestApp.csproj",
         "projectName": "Modul3TestApp",
-        "projectPath": "C:\\Users\\Filip\\Desktop\\Projekat1\\Priprema\\Service\\Modul3Test\\Modul3Test\\Modul3TestApp.csproj",
+        "projectPath": "C:\\Users\\Filip\\Desktop\\Projekat1\\CourierPackageApp\\Service\\Modul3Test\\Modul3Test\\Modul3TestApp.csproj",
         "packagesPath": "C:\\Users\\Filip\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Filip\\Desktop\\Projekat1\\Priprema\\Service\\Modul3Test\\Modul3Test\\obj\\",
+        "outputPath": "C:\\Users\\Filip\\Desktop\\Projekat1\\CourierPackageApp\\Service\\Modul3Test\\Modul3Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Filip\\AppData\\Roaming\\NuGet\\NuGet.Config",

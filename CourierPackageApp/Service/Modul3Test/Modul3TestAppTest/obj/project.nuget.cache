@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3Bunf7jrwL16V3S7d981jgEMlLPB/UMdV7U2tcy9ecN1nVBl/+C7Ty+oFSbVmJ4vOU0MfuxbNmYLnlV8LerRfw==",
+  "dgSpecHash": "ROZCJHIqYZXXtoEWWi6ecoOJIpLEZG+xB4oO26tSSoCVeEIVmELOt/aJz0AIsjfx0O+FaCdMIRgsUv6m3cPVIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Filip\\Desktop\\Projekat1\\Priprema\\Service\\Modul3Test\\Modul3TestAppTest\\Modul3TestAppTest.csproj",
+  "projectFilePath": "C:\\Users\\Filip\\Desktop\\Projekat1\\CourierPackageApp\\Service\\Modul3Test\\Modul3TestAppTest\\Modul3TestAppTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Filip\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Filip\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

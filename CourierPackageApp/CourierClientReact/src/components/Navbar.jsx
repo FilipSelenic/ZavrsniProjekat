@@ -1,11 +1,12 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AppContext } from "./Context";
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 function NavbarComp() {
   const { token, deleteToken, isDeleted, setIsDeleted } =
     useContext(AppContext);
+  const navigate = useNavigate();
 
   // return (
   //   <section>
@@ -55,7 +56,11 @@ function NavbarComp() {
             <Nav className="mr-auto"></Nav>
             <Nav style={{ margin: "5px" }}>
               <Nav.Link disabled>Logged in as: {token.username}</Nav.Link>
-              <Button variant="outline-primary" onClick={() => deleteToken()}>
+              <Button
+                style={{ width: "auto" }}
+                variant="outline-primary"
+                onClick={() => deleteToken()}
+              >
                 Logout
               </Button>
             </Nav>
@@ -64,15 +69,22 @@ function NavbarComp() {
       ) : (
         <Container fluid>
           <Link to="/">
-            <Navbar.Brand>Courier Service</Navbar.Brand>
+            <Navbar.Brand className="justify-content-start">
+              Courier Service
+            </Navbar.Brand>
           </Link>
+
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse className="justify-content-end">
-            <Link to="register" style={{ margin: "0" }}>
-              <Button className="btn btn-light">Register</Button>
-            </Link>
-            <Link to="login" style={{ margin: "0" }}>
-              <Button className="btn btn-light">Login</Button>
-            </Link>
+            <Button
+              className="btn btn-light"
+              onClick={() => navigate("register")}
+            >
+              Register
+            </Button>
+            <Button className="btn btn-light" onClick={() => navigate("login")}>
+              Login
+            </Button>
           </Navbar.Collapse>
         </Container>
       )}

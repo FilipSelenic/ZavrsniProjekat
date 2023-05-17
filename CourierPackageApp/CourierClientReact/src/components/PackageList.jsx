@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Package from "./Package";
 import { AppContext } from "./Context";
+import Spinner from "react-bootstrap/Spinner";
 
 function PackageList() {
   const { token, packages, isLoading, setIsDeleted, isDeleted } =
@@ -28,7 +29,9 @@ function PackageList() {
   return (
     <section>
       {isLoading ? (
-        <h3>Loading...</h3>
+        <Spinner animation="border" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
       ) : (
         <section>
           {!token ? (
